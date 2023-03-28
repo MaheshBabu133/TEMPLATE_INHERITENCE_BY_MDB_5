@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Parent</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <style>
+        body
+        {
+            background: url('{% static 'images/puneet_sir1.jpeg' %}');
+            background-repeat:no-repeate;
+            background-position:0px 0px;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        .two
+        {
+            display:inline;
+            text-align: center;
+            padding: 15px;
+            border-radius: 0px 20px 0px 20px;
+            box-shadow: 0px 0px 20px rgb(255, 255, 255);
+            font-size: 40px;
+            top: 100px;
+        }
+        .three
+        {
+            background: radial-gradient(red,rgb(226, 249, 226));
+        }
+        .one
+        {
+            height: 300px;
+            width: 400px;
+            border-radius: 0px 20% 0px 20%;
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            
+        }
+        div
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:no-wrap;
+            flex-direction:column;
+        }
+    </style>
+</head>
+<body>
+   <center> <h1 class="btn btn-danger two m-5 " >This is the Parent Material Design Bootstrap 5</h1></center>
+
+
+
+   {% block body_block %}
+<h1 class="m-5 three two">Puneet Rajkumar images</h1>
+
+<div>
+
+<img class="one m-5" src="{% static 'images/gg.jpeg' %}" alt="">
+<img class="one m-5" src="{% static 'images/puneet_sir.jpg' %}" alt="">
+<img class="one m-5" src="{% static 'images/puneet_sir1.jpeg' %}" alt="">
+<img class="one m-5" src="{% static 'images/puneet_sir2.jpg' %}" alt="">
+<img class="one m-5" src="{% static 'images/puneet_sir3.jpg' %}" alt="">
+<img class="one m-5" src="{% static 'images/puneet_sir4.jpeg' %}" alt="">
+
+</div>
+{% endblock %}
+
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+</html>

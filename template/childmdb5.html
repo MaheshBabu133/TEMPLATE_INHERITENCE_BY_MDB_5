@@ -1,0 +1,11 @@
+{% extends 'mdb5.html' %}
+{% load static %}
+{% block title %}
+<title>Child</title>
+{% endblock %}
+
+
+{% block body_block %}
+<center><h1 class="btn btn-secondary">this is the content of the child class</h1></center>
+<img class="one m-5" src="{% static 'images/gg.jpeg' %}" alt="">
+{% endblock %}
